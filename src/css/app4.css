@@ -1,0 +1,19 @@
+.app4{}
+.app4 .circle{
+    width: 50%;
+    height: 50%;
+    border: 1px solid;
+    border-radius: 50%;
+    transform: translate(50%, 50%);
+}
+@keyframes change {
+    0%{
+     background-color: tomato;   
+    }
+    100%{
+        background-color: blue;
+    }
+}
+.app4 .circle.active{
+    animation: change 1s infinite alternate linear;
+}

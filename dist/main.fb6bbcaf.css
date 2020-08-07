@@ -1,0 +1,83 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.app-wraper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.app-wraper section{
+    width: 50%;
+    height: 50vh;
+    border: 1px solid;
+}
+
+.app1{
+   
+}
+.app1 .output{
+
+}
+.app1 .actions{
+
+}
+
+
+
+.app2{}
+.app2 .tab-bar{
+    border: 1px solid;
+    display: flex;
+}
+.app2 .tab-bar li {
+    width: 50%;
+}
+.app2 .tab-bar .selected,.app2 .tab-content .selected{
+    display: block;
+    background-color: tomato;
+}
+.app2 .tab-content li {
+    display: none;
+}
+.app3{
+    
+}
+
+.app3 .square{
+    width: 20%;
+    height: 20%;
+    border: 1px solid;
+    margin: 10px;
+    transition: all 1s;
+}
+.app3 .square.active {
+    transform: translateX(200%);
+}
+.app4{}
+.app4 .circle{
+    width: 50%;
+    height: 50%;
+    border: 1px solid;
+    border-radius: 50%;
+    transform: translate(50%, 50%);
+}
+@keyframes change {
+    0%{
+     background-color: tomato;   
+    }
+    100%{
+        background-color: blue;
+    }
+}
+.app4 .circle.active{
+    animation: change 1s infinite alternate linear;
+}
+
+/*# sourceMappingURL=/main.fb6bbcaf.css.map */

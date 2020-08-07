@@ -1,0 +1,9 @@
+.app-wraper {
+    display: flex;
+    flex-wrap: wrap;
+}
+.app-wraper section{
+    width: 50%;
+    height: 50vh;
+    border: 1px solid;
+}

@@ -1,0 +1,31 @@
+mvc01
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#	new file:   .gitignore
+#	new file:   dist/index.html
+#	new file:   dist/main.fb6bbcaf.css
+#	new file:   dist/main.fb6bbcaf.css.map
+#	new file:   dist/main.fb6bbcaf.js
+#	new file:   dist/main.fb6bbcaf.js.map
+#	new file:   package.json
+#	new file:   src/css/app1.css
+#	new file:   src/css/app2.css
+#	new file:   src/css/app3.css
+#	new file:   src/css/app4.css
+#	new file:   src/css/global.css
+#	new file:   src/css/reset.css
+#	new file:   src/index.html
+#	new file:   src/js/app1.js
+#	new file:   src/js/app2.js
+#	new file:   src/js/app3.js
+#	new file:   src/js/app4.js
+#	new file:   src/js/main.js
+#	new file:   src/package.json
+#	new file:   yarn.lock
+#

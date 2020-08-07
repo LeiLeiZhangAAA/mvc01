@@ -1,0 +1,15 @@
+.app2{}
+.app2 .tab-bar{
+    border: 1px solid;
+    display: flex;
+}
+.app2 .tab-bar li {
+    width: 50%;
+}
+.app2 .tab-bar .selected,.app2 .tab-content .selected{
+    display: block;
+    background-color: tomato;
+}
+.app2 .tab-content li {
+    display: none;
+}
