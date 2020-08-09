@@ -11404,18 +11404,23 @@ require("../css/app2");
 
 var _jquery = _interopRequireDefault(require("jquery"));
 
+var _localStorage$getItem;
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var $bar = (0, _jquery.default)('.app2 .tab-bar');
 var $content = (0, _jquery.default)('.app2 .tab-content');
+var localKey2 = 'app2.index';
+var $index = (_localStorage$getItem = localStorage.getItem(localKey2)) !== null && _localStorage$getItem !== void 0 ? _localStorage$getItem : 0;
 $bar.on('click', 'li', function (event) {
   var $current = (0, _jquery.default)(event.currentTarget);
   var $index = $current.index();
+  localStorage.setItem(localKey2, $index);
   $current.toggleClass('selected').siblings().removeClass('selected');
   $content.children().eq($index).toggleClass('selected').siblings().removeClass('selected');
 }); //自动触发点击事件
 
-$bar.children().eq(0).trigger('click');
+$bar.children().eq($index).trigger('click');
 },{"../css/app2":"css/app2.css","jquery":"../node_modules/jquery/dist/jquery.js"}],"css/app3.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
@@ -11431,8 +11436,17 @@ var _jquery = _interopRequireDefault(require("jquery"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var $square = (0, _jquery.default)('.app3 .square');
+var localKey3 = 'app3.active';
+var active = localStorage.getItem(localKey3) === 'yes';
+$square.toggleClass('active', active);
 $square.on('click', function (event) {
   (0, _jquery.default)(event.currentTarget).toggleClass('active');
+
+  if ($square.hasClass('active')) {
+    localStorage.setItem(localKey3, 'yes');
+  } else {
+    localStorage.setItem(localKey3, 'no');
+  }
 });
 },{"../css/app3":"css/app3.css","jquery":"../node_modules/jquery/dist/jquery.js"}],"css/app4.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
@@ -11469,7 +11483,7 @@ require("../js/app2");
 require("../js/app3");
 
 require("../js/app4");
-},{"../css/reset":"css/reset.css","../css/global":"css/global.css","../js/app1":"js/app1.js","../js/app2":"js/app2.js","../js/app3":"js/app3.js","../js/app4":"js/app4.js"}],"C:/Users/AnnnyZhang/AppData/Roaming/npm-cache/_npx/15496/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../css/reset":"css/reset.css","../css/global":"css/global.css","../js/app1":"js/app1.js","../js/app2":"js/app2.js","../js/app3":"js/app3.js","../js/app4":"js/app4.js"}],"C:/Users/AnnnyZhang/AppData/Roaming/npm-cache/_npx/1748/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -11497,7 +11511,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "8591" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "12484" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -11673,5 +11687,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["C:/Users/AnnnyZhang/AppData/Roaming/npm-cache/_npx/15496/node_modules/parcel/src/builtins/hmr-runtime.js","js/main.js"], null)
+},{}]},{},["C:/Users/AnnnyZhang/AppData/Roaming/npm-cache/_npx/1748/node_modules/parcel/src/builtins/hmr-runtime.js","js/main.js"], null)
 //# sourceMappingURL=/main.fb6bbcaf.js.map

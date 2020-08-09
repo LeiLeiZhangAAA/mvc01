@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="0d0b18c0-4856-4929-9386-2fb8414695fc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/dist/main.fb6bbcaf.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.fb6bbcaf.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.fb6bbcaf.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.fb6bbcaf.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/app2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/app2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/app3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/app3.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="hiddenUrls">
+      <set>
+        <option value="https://github.com/LeiLeiZhangAAA/mvc01" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectId" id="1fnDU4WcASvjxu4ByLgwoBqQGrb" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0d0b18c0-4856-4929-9386-2fb8414695fc" name="Default Changelist" comment="" />
+      <created>1596844977250</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1596844977250</updated>
+      <workItem from="1596844978359" duration="580000" />
+      <workItem from="1596845949999" duration="360000" />
+      <workItem from="1596947488295" duration="8000" />
+      <workItem from="1596947566986" duration="4000" />
+      <workItem from="1596949283450" duration="1759000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TerminalProjectNonSharedOptionsProvider">
+    <option name="shellPath" value="D:\tools\cmder\vendor\git-for-windows\bin\bash.exe" />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="309" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596949337585">
+      <screen x="0" y="0" width="1707" height="1036" />
+    </state>
+    <state x="309" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.1036@0.0.1707.1036" timestamp="1596949337585" />
+    <state x="634" y="259" key="FileChooserDialogImpl" timestamp="1596949908667">
+      <screen x="0" y="0" width="1707" height="1036" />
+    </state>
+    <state x="634" y="259" key="FileChooserDialogImpl/0.0.1707.1036@0.0.1707.1036" timestamp="1596949908667" />
+    <state x="355" y="163" key="SettingsEditor" timestamp="1596950750553">
+      <screen x="0" y="0" width="1707" height="1036" />
+    </state>
+    <state x="355" y="163" key="SettingsEditor/0.0.1707.1036@0.0.1707.1036" timestamp="1596950750553" />
+    <state x="510" y="240" key="run.anything.popup" timestamp="1596949626175">
+      <screen x="0" y="0" width="1707" height="1036" />
+    </state>
+    <state x="510" y="240" key="run.anything.popup/0.0.1707.1036@0.0.1707.1036" timestamp="1596949626175" />
+  </component>
+</project>
