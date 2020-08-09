@@ -1,11 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="0d0b18c0-4856-4929-9386-2fb8414695fc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dist/main.fb6bbcaf.css" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.fb6bbcaf.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/main.fb6bbcaf.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.fb6bbcaf.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/dist/main.fb6bbcaf.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.fb6bbcaf.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/app2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/app2.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/app3.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/app3.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/js/app1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/app1.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,7 +52,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="yarn" />
-    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -46,7 +66,7 @@
       <workItem from="1596845949999" duration="360000" />
       <workItem from="1596947488295" duration="8000" />
       <workItem from="1596947566986" duration="4000" />
-      <workItem from="1596949283450" duration="1759000" />
+      <workItem from="1596949283450" duration="4343000" />
     </task>
     <servers />
   </component>
@@ -56,22 +76,60 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
   <component name="WindowStateProjectService">
-    <state x="309" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596949337585">
+    <state x="493" y="241" key="#TODO" timestamp="1596952039973">
       <screen x="0" y="0" width="1707" height="1036" />
     </state>
-    <state x="309" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.1036@0.0.1707.1036" timestamp="1596949337585" />
+    <state x="493" y="241" key="#TODO/0.0.1707.1036@0.0.1707.1036" timestamp="1596952039973" />
+    <state x="309" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1596952144144">
+      <screen x="0" y="0" width="1707" height="1036" />
+    </state>
+    <state x="309" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.1036@0.0.1707.1036" timestamp="1596952144144" />
+    <state x="282" y="11" key="CommitChangelistDialog2" timestamp="1596952966056">
+      <screen x="0" y="0" width="1707" height="1036" />
+    </state>
+    <state x="282" y="11" key="CommitChangelistDialog2/0.0.1707.1036@0.0.1707.1036" timestamp="1596952966056" />
+    <state x="136" y="63" width="1365" height="856" key="DiffContextDialog" timestamp="1596952638491">
+      <screen x="0" y="0" width="1707" height="1036" />
+    </state>
+    <state x="136" y="63" width="1365" height="856" key="DiffContextDialog/0.0.1707.1036@0.0.1707.1036" timestamp="1596952638491" />
     <state x="634" y="259" key="FileChooserDialogImpl" timestamp="1596949908667">
       <screen x="0" y="0" width="1707" height="1036" />
     </state>
     <state x="634" y="259" key="FileChooserDialogImpl/0.0.1707.1036@0.0.1707.1036" timestamp="1596949908667" />
-    <state x="355" y="163" key="SettingsEditor" timestamp="1596950750553">
+    <state x="609" y="129" key="RollbackChangesDialog" timestamp="1596952185163">
       <screen x="0" y="0" width="1707" height="1036" />
     </state>
-    <state x="355" y="163" key="SettingsEditor/0.0.1707.1036@0.0.1707.1036" timestamp="1596950750553" />
-    <state x="510" y="240" key="run.anything.popup" timestamp="1596949626175">
+    <state x="609" y="129" key="RollbackChangesDialog/0.0.1707.1036@0.0.1707.1036" timestamp="1596952185163" />
+    <state x="355" y="154" key="SettingsEditor" timestamp="1596953517517">
       <screen x="0" y="0" width="1707" height="1036" />
     </state>
-    <state x="510" y="240" key="run.anything.popup/0.0.1707.1036@0.0.1707.1036" timestamp="1596949626175" />
+    <state x="355" y="154" key="SettingsEditor/0.0.1707.1036@0.0.1707.1036" timestamp="1596953517517" />
+    <state x="346" y="188" key="Vcs.Push.Dialog.v2" timestamp="1596951885725">
+      <screen x="0" y="0" width="1707" height="1036" />
+    </state>
+    <state x="346" y="188" key="Vcs.Push.Dialog.v2/0.0.1707.1036@0.0.1707.1036" timestamp="1596951885725" />
+    <state x="510" y="240" key="run.anything.popup" timestamp="1596953293763">
+      <screen x="0" y="0" width="1707" height="1036" />
+    </state>
+    <state x="510" y="240" key="run.anything.popup/0.0.1707.1036@0.0.1707.1036" timestamp="1596953293763" />
+    <state x="432" y="1" width="840" height="1034" key="search.everywhere.popup" timestamp="1596953305779">
+      <screen x="0" y="0" width="1707" height="1036" />
+    </state>
+    <state x="432" y="1" width="840" height="1034" key="search.everywhere.popup/0.0.1707.1036@0.0.1707.1036" timestamp="1596953305779" />
   </component>
 </project>

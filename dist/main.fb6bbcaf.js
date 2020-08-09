@@ -189,7 +189,79 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"_css_loader":"C:/Users/AnnnyZhang/AppData/Roaming/npm-cache/_npx/15124/node_modules/parcel/src/builtins/css-loader.js"}],"C:/Users/AnnnyZhang/AppData/Roaming/npm-cache/_npx/15496/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"_css_loader":"C:/Users/AnnnyZhang/AppData/Roaming/npm-cache/_npx/15124/node_modules/parcel/src/builtins/css-loader.js"}],"C:/Users/AnnnyZhang/AppData/Roaming/npm-cache/_npx/3684/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
+var bundleURL = null;
+
+function getBundleURLCached() {
+  if (!bundleURL) {
+    bundleURL = getBundleURL();
+  }
+
+  return bundleURL;
+}
+
+function getBundleURL() {
+  // Attempt to find the URL of the current script and use that as the base URL
+  try {
+    throw new Error();
+  } catch (err) {
+    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+
+    if (matches) {
+      return getBaseURL(matches[0]);
+    }
+  }
+
+  return '/';
+}
+
+function getBaseURL(url) {
+  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
+}
+
+exports.getBundleURL = getBundleURLCached;
+exports.getBaseURL = getBaseURL;
+},{}],"C:/Users/AnnnyZhang/AppData/Roaming/npm-cache/_npx/3684/node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
+var bundle = require('./bundle-url');
+
+function updateLink(link) {
+  var newLink = link.cloneNode();
+
+  newLink.onload = function () {
+    link.remove();
+  };
+
+  newLink.href = link.href.split('?')[0] + '?' + Date.now();
+  link.parentNode.insertBefore(newLink, link.nextSibling);
+}
+
+var cssTimeout = null;
+
+function reloadCSS() {
+  if (cssTimeout) {
+    return;
+  }
+
+  cssTimeout = setTimeout(function () {
+    var links = document.querySelectorAll('link[rel="stylesheet"]');
+
+    for (var i = 0; i < links.length; i++) {
+      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
+        updateLink(links[i]);
+      }
+    }
+
+    cssTimeout = null;
+  }, 50);
+}
+
+module.exports = reloadCSS;
+},{"./bundle-url":"C:/Users/AnnnyZhang/AppData/Roaming/npm-cache/_npx/3684/node_modules/parcel/src/builtins/bundle-url.js"}],"css/global.css":[function(require,module,exports) {
+var reloadCSS = require('_css_loader');
+
+module.hot.dispose(reloadCSS);
+module.hot.accept(reloadCSS);
+},{"_css_loader":"C:/Users/AnnnyZhang/AppData/Roaming/npm-cache/_npx/3684/node_modules/parcel/src/builtins/css-loader.js"}],"C:/Users/AnnnyZhang/AppData/Roaming/npm-cache/_npx/15496/node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -256,12 +328,7 @@ function reloadCSS() {
 }
 
 module.exports = reloadCSS;
-},{"./bundle-url":"C:/Users/AnnnyZhang/AppData/Roaming/npm-cache/_npx/15496/node_modules/parcel/src/builtins/bundle-url.js"}],"css/global.css":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"_css_loader":"C:/Users/AnnnyZhang/AppData/Roaming/npm-cache/_npx/15496/node_modules/parcel/src/builtins/css-loader.js"}],"css/app1.css":[function(require,module,exports) {
+},{"./bundle-url":"C:/Users/AnnnyZhang/AppData/Roaming/npm-cache/_npx/15496/node_modules/parcel/src/builtins/bundle-url.js"}],"css/app1.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
@@ -11361,6 +11428,9 @@ var _jquery = _interopRequireDefault(require("jquery"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//初始化html
+var html = "\n    <section class=\"app1\">\n        <div class=\"output\">\n            <span class=\"number\">100</span>\n        </div>\n        <div class=\"actions\">\n            <button class=\"add1\">+1</button>\n            <button class=\"minus1\">-1</button>\n            <button class=\"mul2\">*2</button>\n            <button class=\"divide2\">/2</button>\n        </div>\n    </section>\n";
+var $element = (0, _jquery.default)(html).appendTo((0, _jquery.default)('body .app-wrapper'));
 var $button1 = (0, _jquery.default)('.add1');
 var $button2 = (0, _jquery.default)('.minus1');
 var $button3 = (0, _jquery.default)('.mul2');
@@ -11371,25 +11441,25 @@ $number.text(n || 100);
 $button1.on('click', function () {
   var n = parseInt($number.text());
   n += 1;
-  localStorage.setItem('n', n);
+  localStorage.setItem('n', "".concat(n));
   $number.text(n);
 });
 $button2.on('click', function () {
   var n = parseInt($number.text());
   n -= 1;
-  localStorage.setItem('n', n);
+  localStorage.setItem('n', "".concat(n));
   $number.text(n);
 });
 $button3.on('click', function () {
   var n = parseInt($number.text());
   n *= 2;
-  localStorage.setItem('n', n);
+  localStorage.setItem('n', "".concat(n));
   $number.text(n);
 });
 $button4.on('click', function () {
   var n = parseInt($number.text());
   n /= 2;
-  localStorage.setItem('n', n);
+  localStorage.setItem('n', "".concat(n));
   $number.text(n);
 });
 },{"../css/app1":"css/app1.css","jquery":"../node_modules/jquery/dist/jquery.js"}],"css/app2.css":[function(require,module,exports) {
@@ -11408,6 +11478,8 @@ var _localStorage$getItem;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var html = "\n    <section class=\"app2\">\n        <ol class=\"tab-bar\">\n            <li>1</li>\n            <li>2</li>\n        </ol>\n        <ol class=\"tab-content\">\n            <li>\u5185\u5BB91</li>\n            <li>\u5185\u5BB92</li>\n        </ol>\n    </section>\n";
+var $element = (0, _jquery.default)(html).appendTo((0, _jquery.default)('body .app-wrapper'));
 var $bar = (0, _jquery.default)('.app2 .tab-bar');
 var $content = (0, _jquery.default)('.app2 .tab-content');
 var localKey2 = 'app2.index';
@@ -11435,6 +11507,8 @@ var _jquery = _interopRequireDefault(require("jquery"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var html = "\n    <section class=\"app3\">\n        <div class=\"square\"></div>\n    </section>\n";
+var $element = (0, _jquery.default)(html).appendTo((0, _jquery.default)('body .app-wrapper'));
 var $square = (0, _jquery.default)('.app3 .square');
 var localKey3 = 'app3.active';
 var active = localStorage.getItem(localKey3) === 'yes';
@@ -11462,6 +11536,8 @@ var _jquery = _interopRequireDefault(require("jquery"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+var html = "\n    <section class=\"app4\">\n        <div class=\"circle\"></div>\n    </section>\n";
+var $element = (0, _jquery.default)(html).appendTo((0, _jquery.default)('body .app-wrapper'));
 var $circle = (0, _jquery.default)('.app4 .circle');
 $circle.on('mouseenter', function () {
   $circle.addClass('active');
@@ -11483,7 +11559,7 @@ require("../js/app2");
 require("../js/app3");
 
 require("../js/app4");
-},{"../css/reset":"css/reset.css","../css/global":"css/global.css","../js/app1":"js/app1.js","../js/app2":"js/app2.js","../js/app3":"js/app3.js","../js/app4":"js/app4.js"}],"C:/Users/AnnnyZhang/AppData/Roaming/npm-cache/_npx/1748/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"../css/reset":"css/reset.css","../css/global":"css/global.css","../js/app1":"js/app1.js","../js/app2":"js/app2.js","../js/app3":"js/app3.js","../js/app4":"js/app4.js"}],"C:/Users/AnnnyZhang/AppData/Roaming/npm-cache/_npx/3684/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -11511,7 +11587,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "12484" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "13721" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -11687,5 +11763,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["C:/Users/AnnnyZhang/AppData/Roaming/npm-cache/_npx/1748/node_modules/parcel/src/builtins/hmr-runtime.js","js/main.js"], null)
+},{}]},{},["C:/Users/AnnnyZhang/AppData/Roaming/npm-cache/_npx/3684/node_modules/parcel/src/builtins/hmr-runtime.js","js/main.js"], null)
 //# sourceMappingURL=/main.fb6bbcaf.js.map

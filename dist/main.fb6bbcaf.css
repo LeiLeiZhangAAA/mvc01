@@ -9,11 +9,11 @@
     box-sizing: border-box;
 }
 
-.app-wraper {
+.app-wrapper {
     display: flex;
     flex-wrap: wrap;
 }
-.app-wraper section{
+.app-wrapper section{
     width: 50%;
     height: 50vh;
     border: 1px solid;

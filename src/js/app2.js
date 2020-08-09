@@ -1,6 +1,20 @@
 import '../css/app2'
 import $ from 'jquery';
 
+const html = `
+    <section class="app2">
+        <ol class="tab-bar">
+            <li>1</li>
+            <li>2</li>
+        </ol>
+        <ol class="tab-content">
+            <li>内容1</li>
+            <li>内容2</li>
+        </ol>
+    </section>
+`;
+const $element = $(html).appendTo($('body .app-wrapper'));
+
 const $bar = $('.app2 .tab-bar');
 const $content = $('.app2 .tab-content');
 const localKey2 = 'app2.index';

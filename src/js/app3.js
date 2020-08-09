@@ -1,6 +1,13 @@
 import '../css/app3'
 import $ from 'jquery'
- 
+
+const html = `
+    <section class="app3">
+        <div class="square"></div>
+    </section>
+`;
+const $element = $(html).appendTo($('body .app-wrapper'));
+
 const $square = $('.app3 .square');
 const localKey3 = 'app3.active';
 const active = localStorage.getItem(localKey3) === 'yes';
