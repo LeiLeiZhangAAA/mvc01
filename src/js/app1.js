@@ -1,54 +1,85 @@
 import '../css/app1'
-import $ from 'jquery';
+import $ from 'jquery'
 
-//初始化html
-const html = `
-    <section class="app1">
-        <div class="output">
-            <span class="number">100</span>
+const eventBus = $({})
+
+const model = {
+    data: {
+        n: parseInt(localStorage.getItem('n'))
+    },
+    create() {},
+    delete() {},
+    update(data) {
+        // model.data.n = data
+        Object.assign(model.data, data)
+        eventBus.trigger('m:update')
+    },
+    retrieve() {}
+}
+
+const view = {
+    el: null,
+    html: `
+        <div>
+            <div class="output">
+                <span class="number">{{n}}</span>
+            </div>
+            <div class="actions">
+                <button class="add1">+1</button>
+                <button class="minus1">-1</button>
+                <button class="mul2">*2</button>
+                <button class="divide2">/2</button>
+            </div>
         </div>
-        <div class="actions">
-            <button class="add1">+1</button>
-            <button class="minus1">-1</button>
-            <button class="mul2">*2</button>
-            <button class="divide2">/2</button>
-        </div>
-    </section>
-`;
-const $element = $(html).appendTo($('body .app-wrapper'));
+    `,
+    init(el){
+        view.el = $(el)
+    },
+    render(n){
+        if(view.el.children.length !== 0) view.el.empty()
+        $(view.html.replace('{{n}}', model.data.n))
+            .appendTo($(view.el))
+        localStorage.setItem('n', `${n}`)
+    }
+}
 
-const $button1 = $('.add1');
-const $button2 = $('.minus1');
-const $button3 = $('.mul2');
-const $button4 = $('.divide2');
-const $number = $('.number');
-const n= localStorage.getItem('n');
-$number.text(n || 100);
+const controller = {
+    init(el){
+        view.init(el)
+        view.render(model.data.n)
+        controller.autoBindEvents()
+        eventBus.on('m:update', ()=>{
+            view.render(model.data.n)
+        })
+    },
+    events: {
+        'click .add1': 'add',
+        'click .minus1': 'minus',
+        'click .mul2': 'mul',
+        'click .divide2': 'divide'
+    },
+    add(){
+        model.update(model.data.n + 1)
+    },
+    minus(){
+        model.update(model.data.n - 1)
+    },
+    mul(){
+        model.update(model.data.n * 2)
+    },
+    divide(){
+        model.update(model.data.n / 2)
+    },
+    autoBindEvents(){
+        for(let key in controller.events){
+            const value = controller[controller.events[key]]
+            const spaceIndex = key.indexOf(' ')
+            const part1 = key.slice(0, spaceIndex)
+            const part2 = key.slice(spaceIndex+1)
+            view.el.on(part1, part2, value)
+        }
+    }
+}
 
-$button1.on('click', ()=>{
-    let n= parseInt($number.text());
-    n +=1;
-    localStorage.setItem('n', `${n}`);
-    $number.text(n);
-});
+export default controller
 
-$button2.on('click', ()=>{
-    let n= parseInt($number.text());
-    n -= 1;
-    localStorage.setItem('n', `${n}`);
-    $number.text(n);
-});
-
-$button3.on('click', ()=>{
-    let n = parseInt($number.text());
-    n *=2;
-    localStorage.setItem('n', `${n}`);
-    $number.text(n);
-});
-
-$button4.on('click', ()=>{
-    let n= parseInt($number.text());
-    n /=2;
-    localStorage.setItem('n', `${n}`);
-    $number.text(n);
-});

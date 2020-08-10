@@ -11422,46 +11422,82 @@ return jQuery;
 },{"process":"C:/Users/AnnnyZhang/AppData/Roaming/npm-cache/_npx/13796/node_modules/parcel/node_modules/process/browser.js"}],"js/app1.js":[function(require,module,exports) {
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
 require("../css/app1");
 
 var _jquery = _interopRequireDefault(require("jquery"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//初始化html
-var html = "\n    <section class=\"app1\">\n        <div class=\"output\">\n            <span class=\"number\">100</span>\n        </div>\n        <div class=\"actions\">\n            <button class=\"add1\">+1</button>\n            <button class=\"minus1\">-1</button>\n            <button class=\"mul2\">*2</button>\n            <button class=\"divide2\">/2</button>\n        </div>\n    </section>\n";
-var $element = (0, _jquery.default)(html).appendTo((0, _jquery.default)('body .app-wrapper'));
-var $button1 = (0, _jquery.default)('.add1');
-var $button2 = (0, _jquery.default)('.minus1');
-var $button3 = (0, _jquery.default)('.mul2');
-var $button4 = (0, _jquery.default)('.divide2');
-var $number = (0, _jquery.default)('.number');
-var n = localStorage.getItem('n');
-$number.text(n || 100);
-$button1.on('click', function () {
-  var n = parseInt($number.text());
-  n += 1;
-  localStorage.setItem('n', "".concat(n));
-  $number.text(n);
-});
-$button2.on('click', function () {
-  var n = parseInt($number.text());
-  n -= 1;
-  localStorage.setItem('n', "".concat(n));
-  $number.text(n);
-});
-$button3.on('click', function () {
-  var n = parseInt($number.text());
-  n *= 2;
-  localStorage.setItem('n', "".concat(n));
-  $number.text(n);
-});
-$button4.on('click', function () {
-  var n = parseInt($number.text());
-  n /= 2;
-  localStorage.setItem('n', "".concat(n));
-  $number.text(n);
-});
+var eventBus = (0, _jquery.default)({});
+var model = {
+  data: {
+    n: parseInt(localStorage.getItem('n'))
+  },
+  create: function create() {},
+  delete: function _delete() {},
+  update: function update(data) {
+    // model.data.n = data
+    Object.assign(model.data, data);
+    eventBus.trigger('m:update');
+  },
+  retrieve: function retrieve() {}
+};
+var view = {
+  el: null,
+  html: "\n        <div>\n            <div class=\"output\">\n                <span class=\"number\">{{n}}</span>\n            </div>\n            <div class=\"actions\">\n                <button class=\"add1\">+1</button>\n                <button class=\"minus1\">-1</button>\n                <button class=\"mul2\">*2</button>\n                <button class=\"divide2\">/2</button>\n            </div>\n        </div>\n    ",
+  init: function init(el) {
+    view.el = (0, _jquery.default)(el);
+  },
+  render: function render(n) {
+    if (view.el.children.length !== 0) view.el.empty();
+    (0, _jquery.default)(view.html.replace('{{n}}', model.data.n)).appendTo((0, _jquery.default)(view.el));
+    localStorage.setItem('n', "".concat(n));
+  }
+};
+var controller = {
+  init: function init(el) {
+    view.init(el);
+    view.render(model.data.n);
+    controller.autoBindEvents();
+    eventBus.on('m:update', function () {
+      view.render(model.data.n);
+    });
+  },
+  events: {
+    'click .add1': 'add',
+    'click .minus1': 'minus',
+    'click .mul2': 'mul',
+    'click .divide2': 'divide'
+  },
+  add: function add() {
+    model.update(model.data.n + 1);
+  },
+  minus: function minus() {
+    model.update(model.data.n - 1);
+  },
+  mul: function mul() {
+    model.update(model.data.n * 2);
+  },
+  divide: function divide() {
+    model.update(model.data.n / 2);
+  },
+  autoBindEvents: function autoBindEvents() {
+    for (var key in controller.events) {
+      var value = controller[controller.events[key]];
+      var spaceIndex = key.indexOf(' ');
+      var part1 = key.slice(0, spaceIndex);
+      var part2 = key.slice(spaceIndex + 1);
+      view.el.on(part1, part2, value);
+    }
+  }
+};
+var _default = controller;
+exports.default = _default;
 },{"../css/app1":"css/app1.css","jquery":"../node_modules/jquery/dist/jquery.js"}],"css/app2.css":[function(require,module,exports) {
 var reloadCSS = require('_css_loader');
 
@@ -11552,14 +11588,18 @@ require("../css/reset");
 
 require("../css/global");
 
-require("../js/app1");
+var _app = _interopRequireDefault(require("../js/app1"));
 
 require("../js/app2");
 
 require("../js/app3");
 
 require("../js/app4");
-},{"../css/reset":"css/reset.css","../css/global":"css/global.css","../js/app1":"js/app1.js","../js/app2":"js/app2.js","../js/app3":"js/app3.js","../js/app4":"js/app4.js"}],"C:/Users/AnnnyZhang/AppData/Roaming/npm-cache/_npx/3684/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_app.default.init('.app-wrapper .app1');
+},{"../css/reset":"css/reset.css","../css/global":"css/global.css","../js/app1":"js/app1.js","../js/app2":"js/app2.js","../js/app3":"js/app3.js","../js/app4":"js/app4.js"}],"C:/Users/AnnnyZhang/AppData/Roaming/npm-cache/_npx/12220/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -11587,7 +11627,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "13721" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "1921" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -11763,5 +11803,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["C:/Users/AnnnyZhang/AppData/Roaming/npm-cache/_npx/3684/node_modules/parcel/src/builtins/hmr-runtime.js","js/main.js"], null)
+},{}]},{},["C:/Users/AnnnyZhang/AppData/Roaming/npm-cache/_npx/12220/node_modules/parcel/src/builtins/hmr-runtime.js","js/main.js"], null)
 //# sourceMappingURL=/main.fb6bbcaf.js.map
