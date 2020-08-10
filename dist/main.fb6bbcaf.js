@@ -11475,16 +11475,24 @@ var controller = {
     'click .divide2': 'divide'
   },
   add: function add() {
-    model.update(model.data.n + 1);
+    model.update({
+      n: model.data.n + 1
+    });
   },
   minus: function minus() {
-    model.update(model.data.n - 1);
+    model.update({
+      n: model.data.n - 1
+    });
   },
   mul: function mul() {
-    model.update(model.data.n * 2);
+    model.update({
+      n: model.data.n * 2
+    });
   },
   divide: function divide() {
-    model.update(model.data.n / 2);
+    model.update({
+      n: model.data.n / 2
+    });
   },
   autoBindEvents: function autoBindEvents() {
     for (var key in controller.events) {

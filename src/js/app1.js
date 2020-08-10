@@ -59,16 +59,16 @@ const controller = {
         'click .divide2': 'divide'
     },
     add(){
-        model.update(model.data.n + 1)
+        model.update({n: model.data.n + 1})
     },
     minus(){
-        model.update(model.data.n - 1)
+        model.update({n: model.data.n - 1})
     },
     mul(){
-        model.update(model.data.n * 2)
+        model.update({n: model.data.n * 2})
     },
     divide(){
-        model.update(model.data.n / 2)
+        model.update({n: model.data.n / 2})
     },
     autoBindEvents(){
         for(let key in controller.events){

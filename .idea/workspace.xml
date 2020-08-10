@@ -21,12 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0d0b18c0-4856-4929-9386-2fb8414695fc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.fb6bbcaf.js" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.fb6bbcaf.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/dist/main.fb6bbcaf.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/dist/main.fb6bbcaf.js.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/app1.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/app1.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/js/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,8 +63,16 @@
       <workItem from="1596947488295" duration="8000" />
       <workItem from="1596947566986" duration="4000" />
       <workItem from="1596949283450" duration="13768000" />
-      <workItem from="1597032871443" duration="9428000" />
+      <workItem from="1597032871443" duration="10722000" />
     </task>
+    <task id="LOCAL-00001" summary="改写模块1">
+      <created>1597045125518</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1597045125518</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -92,7 +94,8 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="改写模块1" />
+    <option name="LAST_COMMIT_MESSAGE" value="改写模块1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="493" y="241" key="#TODO" timestamp="1596952039973">
@@ -103,10 +106,10 @@
       <screen x="0" y="0" width="1707" height="1036" />
     </state>
     <state x="309" y="173" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1707.1036@0.0.1707.1036" timestamp="1596952144144" />
-    <state x="282" y="11" key="CommitChangelistDialog2" timestamp="1597041973048">
+    <state x="282" y="11" key="CommitChangelistDialog2" timestamp="1597045124891">
       <screen x="0" y="0" width="1707" height="1036" />
     </state>
-    <state x="282" y="11" key="CommitChangelistDialog2/0.0.1707.1036@0.0.1707.1036" timestamp="1597041973048" />
+    <state x="282" y="11" key="CommitChangelistDialog2/0.0.1707.1036@0.0.1707.1036" timestamp="1597045124891" />
     <state x="136" y="63" width="1365" height="856" key="DiffContextDialog" timestamp="1596974140407">
       <screen x="0" y="0" width="1707" height="1036" />
     </state>
@@ -127,10 +130,10 @@
       <screen x="0" y="0" width="1707" height="1036" />
     </state>
     <state x="679" y="415" key="VCS.ChangelistChooser/0.0.1707.1036@0.0.1707.1036" timestamp="1596977516086" />
-    <state x="346" y="188" key="Vcs.Push.Dialog.v2" timestamp="1596951885725">
+    <state x="346" y="188" key="Vcs.Push.Dialog.v2" timestamp="1597045460667">
       <screen x="0" y="0" width="1707" height="1036" />
     </state>
-    <state x="346" y="188" key="Vcs.Push.Dialog.v2/0.0.1707.1036@0.0.1707.1036" timestamp="1596951885725" />
+    <state x="346" y="188" key="Vcs.Push.Dialog.v2/0.0.1707.1036@0.0.1707.1036" timestamp="1597045460667" />
     <state x="93" y="93" width="1521" height="851" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1596975405109">
       <screen x="0" y="0" width="1707" height="1036" />
     </state>
